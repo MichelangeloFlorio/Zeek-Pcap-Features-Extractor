@@ -5,7 +5,7 @@ Zeek Package that extracts features from file .pcap (that captures data traffic)
 
 ## Run
 ```
-java -jar TablutAI.jar <WHITE|BLACK> <timeout> <ip_server>
+zeek -r file.pcap test1.zeek ignore_checksums=T
 ```
 ## Description
 
