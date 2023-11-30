@@ -1,11 +1,15 @@
 # Zeek-Pcap-Features-Extractor
-Zeek Package that extracts features from file .pcap (that captures data traffic)
+Zeek Package that extends the functionality of Zeek network analysis framework. This package automatically recognizes IRC communication in a packet capture (pcap) file and automatically extract features from it. The goal for the feature extraction is to describe an individual IRC communications that occur in the pcap file as accurately as possible.
 
 ## Installation
-
-## Run
+To install the package using Zeek Package Manager, run the following command:
 ```
-zeek -r file.pcap test1.zeek ignore_checksums=T
+$ zkg install zeek/stratosphereips/zeek-package-IRC
+```
+## Run
+To extract the IRC features on the selected pcap file that contains IRC, run the following command in a terminal:
+```
+$ zeek -r file.pcap test1.zeek ignore_checksums=T
 ```
 ## Description
 
