@@ -4,7 +4,9 @@ Zeek Package that extracts features from file .pcap (that captures data traffic)
 ## Installation
 
 ## Run
-
+```
+java -jar TablutAI.jar <WHITE|BLACK> <timeout> <ip_server>
+```
 ## Description
 
 ## Extracted Features
