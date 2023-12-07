@@ -11,6 +11,20 @@ To extract the IRC features on the selected pcap file that contains IRC, run the
 ```
 $ zeek -r file.pcap test1.zeek ignore_checksums=T
 ```
+The output will be stored in fullLog.log file in zeek log format. The log will look like this:
+```
+$ #separator \x09
+$ #set_separator  ,
+$ #empty_field    (empty)
+$ #unset_field    -
+$ #path   fullLog
+$ #open   2023-12-07-11-05-39
+$ #fields ts  uid id.orig_h   id.orig_p   id.resp_h   id.resp_p   proto   service duration    orig_bytes  resp_bytes  conn_state  local_orig  local_resp  missed_bytes    history orig_pkts   orig_ip_bytes   resp_pkts   resp_ip_bytes   tunnel_parents  sload   dload   smeansz dmeansz trans_depth reb_bdy_len start_time  last_time   is_sm_ips_ports is_ftp_login    user_ftp    pwd_ftp ct_ftp_cmd  pkts_dropped_   sjit    djit    sinpkt  dinpkt
+$ #types  string  string  addr    port    addr    port    enum    string  string  count   count   string  bool    bool    count   string  count   count   count   count   set[string] double  double  double  double  count   count   string  string  string  count   string  string  count   count   interval    interval    interval    interval
+2023-01-23 21:52:10 Ctcnkh1AHaKnCbfish  185.175.0.3 59244   185.175.0.5 502 tcp modbus  0m0s    12  11  SF  -   -   0   ShADadFf    6   332 4   227 -   125476.218136   115019.866625   2.0 2.0 0   0   2023-01-23 21:52:10 2023-01-23 21:52:10 0   -   -   -   -   0   0.025494    0.000000    0.124872    0.157102
+2023-01-23 21:52:10 CwOqfa3Ov8oO8eJm6l  185.175.0.3 59246   185.175.0.5 502 tcp modbus  0m0s    12  11  SF  -   -   0   ShADadFf    6   332 4   227 -   74017.129412    67849.035294    2.0 2.0 0   0   2023-01-23 21:52:10 2023-01-23 21:52:10 0   -   -   -   -   0   -0.001232   0.000000    0.001895    0.000500
+$ #close  2023-12-07-11-06-17
+```
 ## Description
 
 ## Extracted Features
