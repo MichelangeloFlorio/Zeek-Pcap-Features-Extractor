@@ -11,7 +11,7 @@ To extract the IRC features on the selected pcap file that contains IRC, run the
 ```
 $ zeek -r file.pcap file.zeek ignore_checksums=T
 ```
-The output will be stored in fullLog.log file in zeek log format. The log will look like this:
+The output will be stored in (`fullLog.log`) file in zeek log format. The log will look like this:
 ```
 $ #separator \x09
 $ #set_separator  ,
