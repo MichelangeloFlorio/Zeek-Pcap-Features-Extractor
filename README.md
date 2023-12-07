@@ -9,7 +9,7 @@ $ zkg install zeek/stratosphereips/zeek-package-IRC
 ## Run
 To extract the IRC features on the selected pcap file that contains IRC, run the following command in a terminal:
 ```
-$ zeek -r file.pcap test1.zeek ignore_checksums=T
+$ zeek -r file.pcap file.zeek ignore_checksums=T
 ```
 The output will be stored in fullLog.log file in zeek log format. The log will look like this:
 ```
