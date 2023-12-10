@@ -92,7 +92,7 @@ To do this we took advantage of the events and functions made available by Zeek,
 In addition, to make the most of the log files produced automatically by Zeek, we used Machine Learning algorithms to study and graph the occurrences and characteristics of the various attacks stored in pcap files of the ModBus dataset in the section relating to the attacks, called "attack".
 
 ## Extracted Features
-for all the features to extract refer to the excel file, called "featureCyber" provided in the previous part together with the code
+For all the features to extract refer to the excel file, called "featureCyber" provided in the previous part together with the code
 
 ## Extension (Python and Machine Learning)
 The example of code to parse a Zeek's log into Dataframe in python using Zat:
