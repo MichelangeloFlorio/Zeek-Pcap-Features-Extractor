@@ -19,7 +19,7 @@ or optionally:
 ```
 $ zeek Zeek-Pcap-Features-Extractor -r file.pcap ignore_checksums=T
 ```
-The output will be stored in `fullLog.log` file in zeek log format. The log will look like this:
+The output will be stored in multiple log files in zeek log format. The `fullLog.log` contains all the features extracted and will look like this:
 ```
 $ #separator \x09
 $ #set_separator  ,
@@ -32,6 +32,58 @@ $ #types  string  string  addr    port    addr    port    enum    string  string
 2023-01-23 21:52:10 Ctcnkh1AHaKnCbfish  185.175.0.3 59244   185.175.0.5 502 tcp modbus  0m0s    12  11  SF  -   -   0   ShADadFf    6   332 4   227 -   125476.218136   115019.866625   2.0 2.0 0   0   2023-01-23 21:52:10 2023-01-23 21:52:10 0   -   -   -   -   0   0.025494    0.000000    0.124872    0.157102
 2023-01-23 21:52:10 CwOqfa3Ov8oO8eJm6l  185.175.0.3 59246   185.175.0.5 502 tcp modbus  0m0s    12  11  SF  -   -   0   ShADadFf    6   332 4   227 -   74017.129412    67849.035294    2.0 2.0 0   0   2023-01-23 21:52:10 2023-01-23 21:52:10 0   -   -   -   -   0   -0.001232   0.000000    0.001895    0.000500
 $ #close  2023-12-07-11-06-17
+```
+The `flowFeatures.log` will look like this:
+```
+#separator \x09
+#set_separator  ,
+#empty_field    (empty)
+#unset_field    -
+#path   flowFeatures
+#open   2023-12-07-16-04-05
+#fields id.orig_h   id.orig_p   id.resp_h   id.resp_p   proto
+#types  addr    port    addr    port    enum
+185.175.0.3 58040   185.175.0.5 502 tcp
+185.175.0.3 58042   185.175.0.5 502 tcp
+#close  2023-12-07-16-05-17
+```
+The `infoPackets.log` will look like this:
+```
+#separator \x09
+#set_separator  ,
+#empty_field    (empty)
+#unset_field    -
+#path   infoPackets
+#open   2023-12-07-16-04-05
+#fields stcpb   dtcpb   ttl win
+#types  count   count   count   count
+-   -   64  509
+-   1   64  502
+#close  2023-12-07-16-05-12
+```
+The `infoTCPConn.log` will look like this:
+```
+#separator \x09
+#set_separator  ,
+#empty_field    (empty)
+#unset_field    -
+#path   infoTCPConn
+#open   2023-12-07-16-04-05
+#fields synack  ackdat  tcprtt  m_int_s m_int_d
+#types  interval    interval    interval    interval    interval
+0.000000    0.000000    0.000000    0.000000    0.000000
+0.000000    0.000026    0.000026    0.000004    0.000000
+0.000000    0.000019    0.000019    0.000003    0.000000
+#close  2023-12-07-16-05-12
+```
+The output on the terminal will look like this:
+```
+-----------Feature 43-----------
+There are 75 connections that have the same IP destination '185.175.0.8'
+There are 3 connections that have the same IP destination '185.175.0.5'
+There are 20 connections that have the same IP destination '185.175.0.4'
+There is 1 connection that has the same IP destination '185.175.0.6'
+----------------------------------------
 ```
 ## Description
 
