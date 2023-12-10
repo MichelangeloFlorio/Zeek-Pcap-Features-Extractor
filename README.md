@@ -11,9 +11,13 @@ To install the package using Zeek Package Manager, run the following command:
 $ zkg install Zeek-Pcap-Features-Extractor
 ```
 ## Run
-To extract the IRC features on the selected pcap file that contains IRC, run the following command in a terminal:
+To extract the features on the selected pcap file that contains different connections, run the following command in a terminal:
 ```
-$ zeek -r file.pcap file.zeek ignore_checksums=T
+$ zeek Zeek-Pcap-Features-Extractor -r file.pcap
+```
+or optionally:
+```
+$ zeek Zeek-Pcap-Features-Extractor -r file.pcap ignore_checksums=T
 ```
 The output will be stored in `fullLog.log` file in zeek log format. The log will look like this:
 ```
