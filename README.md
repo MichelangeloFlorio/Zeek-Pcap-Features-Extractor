@@ -76,7 +76,7 @@ The `infoTCPConn.log` will look like this:
 0.000000    0.000019    0.000019    0.000003    0.000000
 #close  2023-12-07-16-05-12
 ```
-The output on the terminal will look like this:
+The output on the `terminal` will look like this:
 ```
 -----------Feature 43-----------
 There are 75 connections that have the same IP destination '185.175.0.8'
