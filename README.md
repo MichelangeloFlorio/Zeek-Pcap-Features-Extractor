@@ -88,6 +88,7 @@ There is 1 connection that has the same IP destination '185.175.0.6'
 ## Description
 Once the data was obtained from the network traffic capture, a process was performed to extract the features. We analyzed the pcap files that portray the network traffic of the ModBus dataset, we calculated and printed 63 features, of which 49 for each connection recorded within the pcap file and 14 inherent to all the connections taken overall.
 To do this we took advantage of the events and functions made available by Zeek, as well as custom functions created by us to simplify the code or to calculate unknown data within the Zeek environment.
+
 In addition, to make the most of the log files produced automatically by Zeek, we used Machine Learning algorithms to study and graph the occurrences and characteristics of the various attacks stored in pcap files of the ModBus dataset in the section relating to the attacks, called "attack".
 
 ## Extracted Features
