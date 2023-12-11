@@ -92,10 +92,10 @@ To do this, we took advantage of the events and functions made available by Zeek
 In addition, to make the most of the log files produced automatically by Zeek, we used Machine Learning algorithms to study and graph the occurrences and characteristics of the various attacks stored in pcap files of the ModBus dataset in the section relating to the attacks, called "attack".
 
 ## Extracted Features
-For all the features to extract, it's important to refer to the excel file, called "featureCyber" provided in the previous part together with the code.
+All the features to extract are highlighted in the excel file, called "featureCyber" provided in the previous part together with the code.
 
 ## Extension (Python and Machine Learning)
-The example of code to parse a Zeek's log into Dataframe in python using Zat:
+First of all, it's important to parse a Zeek's log into Dataframe in python using Zat:
 ```python
 import zat
 from zat.log_to_dataframe import LogToDataFrame
@@ -106,7 +106,7 @@ zeek_df = log_to_df.create_dataframe('http.log')
 print('Read in {:d} Rows...'.format(len(zeek_df)))
 zeek_df.head()
 ```
-The following example of code is to Train/fit and Predict anomalous instances using the Isolation Forest model:
+The following example of code is explains how to train/fit and predict anomalous instances using the Isolation Forest model:
 ```python
 odd_clf = IsolationForest(contamination=0.35)
 odd_clf.fit(zeek_matrix)
