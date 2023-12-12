@@ -1,5 +1,5 @@
 # Zeek-Pcap-Features-Extractor
-Zeek Package that extends the functionality of Zeek network analysis framework. This package automatically recognizes connection from (pcap) file and automatically extract features from it. The goal for the feature extraction is to describe an individual connection that occur in the pcap file as accurately as possible.
+Zeek Package that extends the functionality of Zeek network analysis framework. This package automatically recognizes connection from a (pcap) file and automatically extract features from it. The goal for the feature extraction is to describe an individual connection that occurs in the pcap file as accurately as possible.
 
 ## Installation
 To refresh the Zeek Package Manager and add the package, run the following command:
